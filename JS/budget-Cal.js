@@ -2,18 +2,35 @@
 // const incomeValue = incomeTotal.value;
 // console.log('wfn'incomeValue);
 
-function totalCost(product) {
-    const allItemsCost = document.getElementById(product, '-budget');
+function totalCost(costAmount) {
+    const allItemsCost = document.getElementById(costAmount);
     const allItemsValue = allItemsCost.value;
-    allItemsCost.value = allItemsValue;
-    console
+    const allItemsAmount = parseInt(allItemsValue);
+    return allItemsAmount;
+    // console.log(allItemsAmount);
 }
 
 document.getElementById('total-veraity').addEventListener('click', function () {
-    totalCost(product);
-    console.log(totalCost(product));
+
+    let allCost = totalCost('veraity-budget-rent');
+    let allCost1 = totalCost('veraity-budget-food');
+    let allCost2 = totalCost('veraity-budget-other');
+    const totalCostAll = allCost + allCost1 + allCost2;
+    console.log(totalCostAll);
+
+
+    // const allItemsCost = document.getElementById('veraity-budget-rent');
+    // const allItemsValue = allItemsCost.value;
+    // allItemsCost.value = allItemsCost;
+    // console.log(allItemsValue);
+
+    // const allItemsCost = document.getElementById('veraity-budget-food');
+    // const allItemsValue = allItemsCost.value;
+    // console.log(allItemsValue);
+
+
+    // const allItemsCost = document.getElementById('veraity-budget-other');
+    // const allItemsValue = allItemsCost.value;
+    // console.log(allItemsValue);
 })
-document.getElementById('total-veraity').addEventListener('click', function () {
-    totalCost(Rent);
-    console.log(totalCost(Rent));
-})
+
