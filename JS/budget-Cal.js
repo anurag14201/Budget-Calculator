@@ -10,6 +10,10 @@ function totalCost(product) {
 }
 
 document.getElementById('total-veraity').addEventListener('click', function () {
-    totalCost(Food);
-    console.log(totalCost(Food));
+    totalCost(product);
+    console.log(totalCost(product));
+})
+document.getElementById('total-veraity').addEventListener('click', function () {
+    totalCost(Rent);
+    console.log(totalCost(Rent));
 })
