@@ -38,7 +38,7 @@ document.getElementById('total-veraity').addEventListener('click', function () {
     const balanceCost = document.getElementById('balance');
     const perBalance = balanceCost.innerText;
     const balanceCostValue = parseInt(perBalance);
-    const newBalance = balanceCostValue - parseInt(totalCostAll);
+    const newBalance = incomeAmount - newExpenses;
     balanceCost.innerText = newBalance;
     // console.log(newExpenses);
 
@@ -52,7 +52,7 @@ document.getElementById('total-veraity').addEventListener('click', function () {
 
     // const allItemsCost = document.getElementById('veraity-budget-food');
     // const allItemsValue = allItemsCost.value;
-    // console.log(allItemsValue);
+    // console.log(allItemsValue); 
 
 
     // const allItemsCost = document.getElementById('veraity-budget-other');
@@ -60,3 +60,17 @@ document.getElementById('total-veraity').addEventListener('click', function () {
     // console.log(allItemsValue);
 })
 
+// saving Section
+
+function saveAmount(cost) {
+    const saving = document.getElementById(cost);
+    const saveValue = saving.value;
+    const saveingCost = parseInt(saveValue);
+    return saveingCost;
+}
+
+document.getElementById('save-btn').addEventListener('click', function () {
+    const saveCost = saveAmount('save-input')
+    const savingAmountValue = incomeAmount
+    console.log(saveCost);
+})
