@@ -2,6 +2,12 @@
 // const incomeValue = incomeTotal.value;
 // console.log('wfn'incomeValue);
 
+// income section
+
+
+
+
+
 function totalCost(costAmount) {
     const allItemsCost = document.getElementById(costAmount);
     const allItemsValue = allItemsCost.value;
@@ -11,12 +17,32 @@ function totalCost(costAmount) {
 }
 
 document.getElementById('total-veraity').addEventListener('click', function () {
-
+    let incomeAmount = totalCost('income-total');
     let allCost = totalCost('veraity-budget-rent');
     let allCost1 = totalCost('veraity-budget-food');
     let allCost2 = totalCost('veraity-budget-other');
     const totalCostAll = allCost + allCost1 + allCost2;
     console.log(totalCostAll);
+    console.log(incomeAmount);
+
+
+    const ExpensesCost = document.getElementById('expenses');
+    const perExpenses = ExpensesCost.innerText;
+    const ExpensesCostValue = parseInt(perExpenses);
+    const newExpenses = ExpensesCostValue + parseInt(totalCostAll);
+    ExpensesCost.innerText = newExpenses;
+    // console.log(newExpenses);
+
+
+
+    const balanceCost = document.getElementById('balance');
+    const perBalance = balanceCost.innerText;
+    const balanceCostValue = parseInt(perBalance);
+    const newBalance = balanceCostValue - parseInt(totalCostAll);
+    balanceCost.innerText = newBalance;
+    // console.log(newExpenses);
+
+
 
 
     // const allItemsCost = document.getElementById('veraity-budget-rent');
