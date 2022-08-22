@@ -1,12 +1,3 @@
-// const incomeTotal = document.getElementById('income-total');
-// const incomeValue = incomeTotal.value;
-// console.log('wfn'incomeValue);
-
-// income section
-
-
-
-
 
 function totalCost(costAmount) {
     const allItemsCost = document.getElementById(costAmount);
@@ -31,8 +22,6 @@ document.getElementById('total-veraity').addEventListener('click', function () {
     const ExpensesCostValue = parseInt(perExpenses);
     const newExpenses = ExpensesCostValue + parseInt(totalCostAll);
     ExpensesCost.innerText = newExpenses;
-    // console.log(newExpenses);
-
 
 
     const balanceCost = document.getElementById('balance');
@@ -40,24 +29,6 @@ document.getElementById('total-veraity').addEventListener('click', function () {
     const balanceCostValue = parseInt(perBalance);
     const newBalance = incomeAmount - newExpenses;
     balanceCost.innerText = newBalance;
-    // console.log(newExpenses);
-
-
-
-
-    // const allItemsCost = document.getElementById('veraity-budget-rent');
-    // const allItemsValue = allItemsCost.value;
-    // allItemsCost.value = allItemsCost;
-    // console.log(allItemsValue);
-
-    // const allItemsCost = document.getElementById('veraity-budget-food');
-    // const allItemsValue = allItemsCost.value;
-    // console.log(allItemsValue); 
-
-
-    // const allItemsCost = document.getElementById('veraity-budget-other');
-    // const allItemsValue = allItemsCost.value;
-    // console.log(allItemsValue);
 })
 
 // saving Section
@@ -65,12 +36,16 @@ document.getElementById('total-veraity').addEventListener('click', function () {
 function saveAmount(cost) {
     const saving = document.getElementById(cost);
     const saveValue = saving.value;
-    const saveingCost = parseInt(saveValue);
+    const saveingCost = parseFloat(saveValue);
     return saveingCost;
 }
 
 document.getElementById('save-btn').addEventListener('click', function () {
-    const saveCost = saveAmount('save-input')
-    const savingAmountValue = incomeAmount
-    console.log(saveCost);
+    const saveCost = saveAmount('save-input');
+    const incomeCosts = totalCost('income-total');
+    const savingAmountValue = incomeCosts * saveCost;
+
+    console.log(savingAmountValue);
+
+
 })
