@@ -8,13 +8,18 @@ function totalCost(costAmount) {
 }
 
 document.getElementById('total-veraity').addEventListener('click', function () {
+    // if (costAmount > 0) {
+    //     let incomeAmount = totalCost('income-total');
+    //     let allCost = totalCost('veraity-budget-rent');
+    //     let allCost1 = totalCost('veraity-budget-food');
+    //     let allCost2 = totalCost('veraity-budget-other');
+    // }
     let incomeAmount = totalCost('income-total');
     let allCost = totalCost('veraity-budget-rent');
     let allCost1 = totalCost('veraity-budget-food');
     let allCost2 = totalCost('veraity-budget-other');
     const totalCostAll = allCost + allCost1 + allCost2;
-    console.log(totalCostAll);
-    console.log(incomeAmount);
+
 
 
     const ExpensesCost = document.getElementById('expenses');
@@ -40,12 +45,11 @@ function saveAmount(cost) {
     return saveingCost;
 }
 
-document.getElementById('save-btn').addEventListener('click', function () {
-    const saveCost = saveAmount('save-input');
-    const incomeCosts = totalCost('income-total');
-    const savingAmountValue = incomeCosts * saveCost;
+function percentage(partialValue, totalValue) {
+    return (100 * partialValue) / totalValue;
+}
 
-    console.log(savingAmountValue);
-
-
-})
+// document.getElementById('save-btn').addEventListener('click', function () {
+//     const saveCost = saveAmount('save-input');
+//     var parCen =
+// })
